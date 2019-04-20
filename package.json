@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "c": "git-cz",
+    "precommit": "prettier --write src/**/*.js"
   },
   "keywords": [],
   "author": "",
@@ -22,7 +24,10 @@
   },
   "husky": {
     "hooks": {
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook"
+      "pre-commit": "npm run precommit"
     }
+  },
+  "devDependencies": {
+    "prettier": "^1.17.0"
   }
 }
