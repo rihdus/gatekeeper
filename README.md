@@ -14,6 +14,7 @@ Identify user via username and password and create a session for the user.
 Gatekeeper application uses docker containers and docker-compose to orchestrate the system.
 
 ## Development
+Local development server runs on port `3000`
 
 __Install dependencies__
 ```sh
