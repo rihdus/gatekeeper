@@ -1,0 +1,27 @@
+version: "3"
+services:
+  server:
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    container_name: gk-server
+    volumes:
+    - ./:/home/app
+    ports:
+      - 3000:3000
+    command: yarn start
+
+  # install:
+  #   extends:
+  #     service: base
+  #   command: yarn
+
+  # start:
+  #   extends:
+  #     service: base
+  #   command: yarn start
+
+  # postgres:
+  #   image: postgres:11.2-alpine
+  #   environment:
+  #     POSTGRES_PASSWORD: admin
