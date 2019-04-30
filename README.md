@@ -25,3 +25,10 @@ __Run server__
 ```sh
 docker-compose up
 ```
+
+__Start database service__
+```sh
+docker-compose run db
+```
+The database should be accessible at 
+`postgresql://localhost:5432`
